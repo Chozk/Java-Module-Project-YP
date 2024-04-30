@@ -30,11 +30,12 @@ public class Main {
             }
         }
 
-        countDivisionCalculator.itemPrint();
-        double totalSum = countDivisionCalculator.calculateTotal();
-        double devidedPerson = totalSum / howManyPeople;
-
-        String padej = formatter.getPadej(devidedPerson);
-        System.out.printf("Каждый человек должен заплатить %.2f %s", devidedPerson, padej);
+        if (howManyPeople > 1) {
+            countDivisionCalculator.itemPrint();
+            double totalSum = countDivisionCalculator.calculateTotal();
+            double devidedPerson = totalSum / howManyPeople;
+            String padej = formatter.getPadej(devidedPerson);
+            System.out.printf("Каждый человек должен заплатить %.2f %s", devidedPerson, padej);
+        }
     }
 }
