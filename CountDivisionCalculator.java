@@ -75,7 +75,7 @@ public class CountDivisionCalculator {
     double calculateTotal() {
         double totalAmount = 0.0;
         for (Item item : itemList) {
-            totalAmount += item.price;
+            totalAmount += item.getPrice();
         }
         return totalAmount;
     }
@@ -83,7 +83,7 @@ public class CountDivisionCalculator {
     void itemPrint() {
         System.out.println("Добавленные товары:");
         for (Item item : itemList) {
-            System.out.printf("%s %.2f%n", item.name, item.price);
+            System.out.printf("%s %.2f%n", item.getName(), item.getPrice());
         }
     }
 }
